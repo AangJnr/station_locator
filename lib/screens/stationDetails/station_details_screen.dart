@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:recase_string_extension/recase.dart';
@@ -70,13 +72,17 @@ class StationDetailScreen extends StatelessWidget {
           SizedBox(
             height: spacingHalf,
           ),
-          Text(
-            value,
-            softWrap: true,
-            style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w700,
-                color: Colors.black87),
+          Flexible(
+            child: Text(
+              value.trim(),
+              softWrap: true,
+              maxLines: 4,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black87),
+            ),
           ),
         ],
       ),
@@ -96,6 +102,7 @@ class StationDetailScreen extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 15,
+            color: colors.first,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -114,8 +121,9 @@ class StationDetailScreen extends StatelessWidget {
       crossAxisSpacing: 4,
       mainAxisSpacing: 4,
       children: map.entries
-          .map((e) => _buildGridItem(
-              context, e.key.titleCase, e.value.toString().sentenceCase))
+          .map(
+            (e) => _buildGridItem(context, e.key.titleCase, e.value.toString()),
+          )
           .toList(),
     );
   }
@@ -137,7 +145,7 @@ class StationDetailScreen extends StatelessWidget {
         child: Column(children: [
           CustomAppBar(title: station.tradeName.titleCase),
           SizedBox(height: spacingNormal),
-          !isLandscape
+          (!isLandscape && studioLocation != null)
               ? _buildMapView(context, station.tradeName, studioLocation[0],
                   studioLocation[1])
               : SizedBox(height: 0),

@@ -25,7 +25,7 @@ dependencies:
     sdk: flutter
   map_launcher: ^0.4.5
   fluttertoast: ^4.0.0
-  cloud_firestore:
+  cloud_firestore: ^0.13.5
   font_awesome_flutter: ^8.8.1
   #recase: ^3.0.0
   recase_string_extension: ^1.0.0

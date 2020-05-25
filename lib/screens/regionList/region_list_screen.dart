@@ -1,3 +1,4 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
@@ -5,7 +6,6 @@ import 'package:recase_string_extension/recase.dart';
 
 import '../../configurations/themeData.dart';
 import '../../widgets/custom_appbar.dart';
-import '../../widgets/search_view.dart';
 import '../../configurations/constants.dart';
 import '../../models/radio_station.dart';
 
@@ -84,7 +84,7 @@ class _RegionListScreenState extends State<RegionListScreen> {
                 (e) => _buildRegionItem(e.toString().titleCase, groupedData[e]))
             .toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 100,
+          maxCrossAxisExtent: 150,
           childAspectRatio: 1.2,
           crossAxisSpacing: paddingNormal,
           mainAxisSpacing: paddingNormal,
@@ -95,6 +95,8 @@ class _RegionListScreenState extends State<RegionListScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(children: [
@@ -104,7 +106,7 @@ class _RegionListScreenState extends State<RegionListScreen> {
             children: [
               CustomAppBar(title: 'Regions', isHomeScreen: true),
               SizedBox(height: spacingNormal),
-              SearchView(_searchController),
+              //SearchView(_searchController),
               SizedBox(height: spacingNormal),
             ],
           ),

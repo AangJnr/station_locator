@@ -44,8 +44,10 @@ LinearGradient buildGradient(
 const me =
     'https://instagram.facc6-1.fna.fbcdn.net/v/t51.2885-19/s320x320/71274115_628787994313272_2899341196700680192_n.jpg?_nc_ht=instagram.facc6-1.fna.fbcdn.net&_nc_ohc=0bSxn4oAbA0AX-G2GM4&oh=93d0b9321adf178e60fab4e6dc2a5cfd&oe=5EEBAA82';
 
-final lightTheme = ThemeData.light().copyWith(
+final lightTheme = ThemeData(
   accentColor: colorPrimary,
+  primarySwatch: Colors.blue,
+  fontFamily: 'Roboto',
   iconTheme: ThemeData.light().iconTheme.copyWith(
         size: 20.0,
       ),

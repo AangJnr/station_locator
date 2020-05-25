@@ -1,4 +1,3 @@
-import 'package:recase/recase.dart';
 
 import 'contact_address.dart';
 import 'equiptment_info.dart';

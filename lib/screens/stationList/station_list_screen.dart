@@ -142,18 +142,24 @@ class _StationListScreenState extends State<StationListScreen> {
                     ),
                   ],
                 ),
+
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                      Text(
-                        station.location,
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 8,
-                            fontWeight: FontWeight.w600),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical:8.0),
+                        child: Text(
+                          station.location,
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 8,
+                              fontWeight: FontWeight.w600),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
 
                     Row(

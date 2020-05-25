@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:station_locator/configurations/themeData.dart';
@@ -10,17 +11,16 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-final mediaQuery = MediaQuery.of(context);
+    final mediaQuery = MediaQuery.of(context);
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
 
     return Column(children: [
-       SizedBox(
-        height: isLandscape ? spacingNormal :appBarMaginTop,
+      SizedBox(
+        height: isLandscape ? spacingNormal : appBarMaginTop,
       ),
       Padding(
         padding: EdgeInsets.symmetric(horizontal: paddingNormal),
         child: Row(
-
           children: [
             if (!isHomeScreen)
               IconButton(

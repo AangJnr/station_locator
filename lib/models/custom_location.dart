@@ -1,9 +1,8 @@
-class CustomLocation{
-
-
-
-
+class CustomLocation {
   List<double> getLocation(String latitude, String longitude) {
+    if (latitude.toLowerCase().contains('n/a') ||
+        longitude.toLowerCase().contains('n/a')) return null;
+
     double convertedLat = 0.0, convertedLon = 0.0;
     try {
       var expression = RegExp(r'\d+(?:\.\d+)?', caseSensitive: false);
@@ -29,9 +28,8 @@ class CustomLocation{
               (values[2] == 0 ? 0 : values[2] / 3600)) *
           getOperator(longitude);
 
-
       return [convertedLat, convertedLon];
-    } catch(ignore) {
+    } catch (ignore) {
       return null;
     }
   }

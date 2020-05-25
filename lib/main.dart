@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import './configurations/constants.dart';
 import './configurations/themeData.dart';
 import './screens/regionList/region_list_screen.dart';
@@ -12,11 +15,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+     if (Platform.isAndroid) {
+      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
+          statusBarIconBrightness: Brightness.dark,
+          statusBarColor: Colors.white));
+    }
     return MaterialApp(
       title: appName,
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
-      themeMode: ThemeMode.light,
       home: RegionListScreen(),
       routes: {
         ROUTE_REGIONS_SCREEN: (ctx) => RegionListScreen(),
