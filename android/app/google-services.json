@@ -1,0 +1,40 @@
+ {
+  "project_info": {
+    "project_number": "185756170449",
+    "firebase_url": "https://station-locator-f8ee0.firebaseio.com",
+    "project_id": "station-locator-f8ee0",
+    "storage_bucket": "station-locator-f8ee0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185756170449:android:663ef8a252a4597a6fadf0",
+        "android_client_info": {
+          "package_name": "com.example.station_locator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185756170449-a49ptqasaj5o465kcebfbmfpec6g5lk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh9022V1JXLACI_XWDjLrLfPFSv_SANP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185756170449-a49ptqasaj5o465kcebfbmfpec6g5lk9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

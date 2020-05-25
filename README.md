@@ -1,6 +1,6 @@
 # station_locator
 
-This is a simple utility application to aid NCA officials locate radi/tv stations throughoutthe country (Ghana)
+This is a simple utility application to aid NCA officials locate radia/tv stations throughoutthe country (Ghana)
 
 ## Features
 

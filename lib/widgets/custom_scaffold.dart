@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:station_locator/theme_Info.dart';
+import 'package:station_locator/configurations/themeData.dart';
 
 class CustomScaffold extends StatelessWidget {
   final Widget body;
