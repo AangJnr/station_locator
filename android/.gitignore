@@ -6,3 +6,4 @@ gradle-wrapper.jar
 /local.properties
 /key.properties
 GeneratedPluginRegistrant.java
+/src/main/res/values/google_api_key.xml
